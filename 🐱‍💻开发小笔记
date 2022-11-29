@@ -2,7 +2,32 @@
 
 🔗 https://www.jianshu.com/p/a49876c112b9
 
- ![img](https://upload-images.jianshu.io/upload_images/8968852-c40429afbc567280.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp)
+```css
+padding-bottom:constant(safe-area-inset-bottom);/* 兼容 iOS < 11.2 */
+padding-bottom:env(safe-area-inset-bottom);/* 兼容 iOS >= 11.2 */
+```
+
+```css
+padding-bottom: cals(50px + constant(safe-area-inset-bottom));/* 兼容 iOS < 11.2 */
+padding-bottom:cals(50px + env(safe-area-inset-bottom));/* 兼容 iOS >= 11.2 */
+```
+
+50px 是本身就需要的padding值，自定义
 
 constant和env需要同时出现且顺序不能调换
+
+
+
+#### vue3自动绑定类名
+
+两种方式：
+
+```html
+:class="{'class1': condition1,'class2':condition2"
+:class="condition?'class1':'class2'"
+```
+
+
+
+
 
